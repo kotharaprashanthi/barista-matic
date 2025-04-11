@@ -1,0 +1,21 @@
+<div class="machine-container">
+    <!-- Horizontal Scroll Menu -->
+    <div class="drinks-scroll-wrapper">
+        <div class="drinks-scroll-inner">
+            <div *ngFor="let drink of drinks" class="drink-tile">
+                <img [src]="'assets/' + drink.image" alt="{{ drink.name }}" class="drink-image" />
+                <div class="drink-details">
+                    <h2 class="drink-name">{{ drink.name }}</h2>
+                    <p class="drink-cost">${{ drink.cost.toFixed(2) }}</p>
+                    <button mat-raised-button color="accent" class="order-button" *ngIf="canOrderDrink(drink)"
+                        [disabled]="!canOrderDrink(drink) || orderStatus['isProcessing']" (click)="orderDrink(drink)">
+                        Order
+                    </button>
+                    <div *ngIf="!canOrderDrink(drink)" class="out-of-stock">Out of stock</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Loading Modal -->
+    <app-loading-modal [isLoading]="isLoading"></app-loading-modal>
+</div>

@@ -1,0 +1,158 @@
+/* Overall body styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    /* Light background color */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Prevent scrollbars */
+}
+
+
+/* Style the drink buttons and labels */
+.drink-button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    min-width: 150px;
+    /* Fixed width to ensure uniform button size */
+}
+
+.drink-button:hover {
+    background-color: #004d40;
+}
+
+/* For the loading spinner and status (when dispensing a coffee) */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.loading-container img {
+    width: 100px;
+    /* Coffee image size */
+    margin-bottom: 20px;
+}
+
+.loading-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+/* Ingredients list styling */
+.ingredient-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Ingredient styling inside the list */
+.ingredient-item {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark background for contrast */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Scrollable area for the ingredients list */
+.inventory-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Make sure everything is aligned properly inside the container */
+.app-container>.menu-container {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.app-container .menu-container .drink-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    /* Fixed width */
+    text-align: center;
+}
+
+/* Handle ingredient list inside the card */
+.drink-ingredients ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.drink-ingredients li {
+    margin: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.barista-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border-bottom: 2px solid #ffc107;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

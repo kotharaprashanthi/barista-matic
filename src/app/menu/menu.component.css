@@ -1,0 +1,77 @@
+.drinks-scroll-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.drinks-scroll-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+}
+
+.drink-tile {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 240px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    height: 200px;
+    /* 🔥 Force a fixed height here */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.drink-image {
+    width: 32%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.drink-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.drink-name {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+}
+
+.drink-cost {
+    color: #f9d342;
+    font-weight: bold;
+    margin: 0;
+}
+
+.drink-ingredients {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0;
+    font-size: 14px;
+    color: #ccc;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.order-button {
+    margin-top: auto;
+}
+
+.out-of-stock {
+    color: #ff4c4c;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 6px;
+}

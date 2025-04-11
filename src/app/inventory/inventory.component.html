@@ -1,0 +1,12 @@
+<div class="inventory-section">
+    <div class="inventory-header">
+        <h3 class="section-title">☕ Current Inventory</h3>
+        <button mat-raised-button color="accent" (click)="restockInventory()">Restock</button>
+    </div>
+
+    <div class="inventory-scroll-container">
+        <div class="inventory-item" *ngFor="let item of inventory">
+            {{ item.name }}: {{ item.quantity }}
+        </div>
+    </div>
+</div>
