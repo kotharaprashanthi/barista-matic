@@ -95,7 +95,7 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/barista-matic.git
+git clone https://github.com/kotharaprashanthi/barista-matic.git
 cd barista-matic
 ```
 
