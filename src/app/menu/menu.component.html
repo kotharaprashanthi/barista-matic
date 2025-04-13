@@ -6,7 +6,7 @@
                 <img [src]="'assets/' + drink.image" alt="{{ drink.name }}" class="drink-image" />
                 <div class="drink-details">
                     <h2 class="drink-name">{{ drink.name }}</h2>
-                    <p class="drink-cost">${{ drink.cost.toFixed(2) }}</p>
+                      <p class="drink-cost">${{ calculateDrinkCost(drink) | number: '1.2-2' }}</p>
                     <button mat-raised-button color="accent" class="order-button" *ngIf="canOrderDrink(drink)"
                         [disabled]="!canOrderDrink(drink) || orderStatus['isProcessing']" (click)="orderDrink(drink)">
                         Order
