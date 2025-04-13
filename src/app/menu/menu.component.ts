@@ -17,6 +17,18 @@ export class MenuComponent {
     'Foamed Milk', 'Espresso', 'Cocoa', 'Whipped Cream'
   ];
 
+   ingredientPrices: any = {
+    'Coffee': 0.75,
+    'Decaf Coffee': 0.75,
+    'Sugar': 0.25,
+    'Cream': 0.25,
+    'Steamed Milk': 0.35,
+    'Foamed Milk': 0.35,
+    'Espresso': 1.10,
+    'Cocoa': 0.90,
+    'Whipped Cream': 1.00
+  };
+
   ingredientsInStock: { [key: string]: number } = {
     Coffee: 10,
     'Decaf Coffee': 10,
@@ -59,6 +71,13 @@ export class MenuComponent {
     } else {
       alert(`Not enough ingredients to make ${drink.name}`);
     }
+  }
+
+  calculateDrinkCost(drink: any): number {
+    return drink.ingredients.reduce((total: number, ingredient: any) => {
+      const unitCost = this.ingredientPrices[ingredient.name] ?? 0;
+      return total + unitCost * ingredient.quantity;
+    }, 0);
   }
 }
 
