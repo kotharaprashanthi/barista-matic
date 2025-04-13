@@ -42,12 +42,12 @@ export class MenuComponent {
   };
 
   drinks = [
-    { name: 'Coffee', ingredients: [{ name: 'Coffee', quantity: 3 }, { name: 'Sugar', quantity: 1 }, { name: 'Cream', quantity: 1 }], cost: 2.75, image: 'coffee.png' },
-    { name: 'Decaf Coffee', ingredients: [{ name: 'Decaf Coffee', quantity: 3 }, { name: 'Sugar', quantity: 1 }, { name: 'Cream', quantity: 1 }], cost: 2.75, image: 'decafee.png' },
-    { name: 'Caffe Latte', ingredients: [{ name: 'Espresso', quantity: 2 }, { name: 'Steamed Milk', quantity: 1 }], cost: 2.55, image: 'latte.png' },
-    { name: 'Caffe Americano', ingredients: [{ name: 'Espresso', quantity: 3 }], cost: 3.30, image: 'cafeeamericano.png' },
-    { name: 'Caffe Mocha', ingredients: [{ name: 'Espresso', quantity: 1 }, { name: 'Cocoa', quantity: 1, }, { name: 'Steamed Milk', quantity: 1 }, { name: 'Whipped Cream', quantity: 1 }], cost: 3.35, image: 'mocha.png' },
-    { name: 'Cappuccino', ingredients: [{ name: 'Espresso', quantity: 2 }, { name: 'Steamed Milk', quantity: 1 }, { name: 'Foamed Milk', quantity: 1 }], cost: 2.90, image: 'cappacino.png' },
+    { name: 'Coffee', ingredients: [{ name: 'Coffee', quantity: 3 }, { name: 'Sugar', quantity: 1 }, { name: 'Cream', quantity: 1 }], image: 'coffee.png' },
+    { name: 'Decaf Coffee', ingredients: [{ name: 'Decaf Coffee', quantity: 3 }, { name: 'Sugar', quantity: 1 }, { name: 'Cream', quantity: 1 }], image: 'decafee.png' },
+    { name: 'Caffe Latte', ingredients: [{ name: 'Espresso', quantity: 2 }, { name: 'Steamed Milk', quantity: 1 }], image: 'latte.png' },
+    { name: 'Caffe Americano', ingredients: [{ name: 'Espresso', quantity: 3 }], image: 'cafeeamericano.png' },
+    { name: 'Caffe Mocha', ingredients: [{ name: 'Espresso', quantity: 1 }, { name: 'Cocoa', quantity: 1, }, { name: 'Steamed Milk', quantity: 1 }, { name: 'Whipped Cream', quantity: 1 }], image: 'mocha.png' },
+    { name: 'Cappuccino', ingredients: [{ name: 'Espresso', quantity: 2 }, { name: 'Steamed Milk', quantity: 1 }, { name: 'Foamed Milk', quantity: 1 }], image: 'cappacino.png' },
   ];
 
   constructor(private orderService: OrderService) { }
